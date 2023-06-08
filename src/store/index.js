@@ -8,7 +8,7 @@ export default configureStore({
     reducer: {
         products: productsSlice,
         app: appSlice,
-        carts: cartSlice,
+        cart: cartSlice,
         purchases: purchasesSlice
     }
 })
