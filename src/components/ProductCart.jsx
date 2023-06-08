@@ -31,7 +31,7 @@ const ProductCart = ({ product, index }) => {
     return (
         <>
         <div className='product-cart'>
-            <img src={product.product.images[0].url} alt="" />
+            <img src={product.product?.images[0]?.url} alt="" />
             <div className="details">
                 <h5 onClick={navigateToProduct}>
                     {product.product.title}
