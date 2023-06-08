@@ -2,7 +2,7 @@ import deafultAxios from "axios";
 
 const axios = () =>
   deafultAxios.create({
-    baseURL: "https://ecommerce-app-e3lh.onrender.com",
+    baseURL: "http://localhost:8080",
     headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
