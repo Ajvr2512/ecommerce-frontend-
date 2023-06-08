@@ -22,22 +22,22 @@ export const cartSlice = createSlice({
 export const getCart = () => (dispatch) => {
     if(!localStorage.getItem('token')) return;
     dispatch(request(async() => {
-        const res = await axios().get('/carts');
+        const res = await axios().get('/cart');
         dispatch(setCart(res.data));
     }))
 }
 
 export const deleteProductCart = (id, index) => (dispatch) => {
     dispatch(request(async() => {
-        await axios().delete(`/carts/${id}`);
+        await axios().delete(`/cart/${id}`);
         dispatch(deleteProduct(index));
     }))
 }
 
 export const addProductCart = (productCart) => dispatch => {
     dispatch(request(async() => {
-        const res = await axios().post('/carts', productCart);
-        const {data} = await axios().get(`/carts/${res.data.id}`);
+        const res = await axios().post('/cart', productCart);
+        const {data} = await axios().get(`/cart/${res.data.id}`);
         dispatch(addProduct(data));
         dispatch(setIsCartOpen(true));
     }, {
