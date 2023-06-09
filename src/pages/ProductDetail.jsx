@@ -37,7 +37,7 @@ const ProductDetail = () => {
       <Row>
         <Col lg={5} className="pe-5">
           <Carousel style={{background: "#fff", borderRadius: "20px"}} interval={null} variant="dark">
-            {product.images.map(image => (
+            {product.productImgs?.map(image => (
               <Carousel.Item key={image.id}>
                 <img
                   className="d-block w-100 mb-5"

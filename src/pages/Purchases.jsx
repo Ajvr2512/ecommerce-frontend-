@@ -45,7 +45,7 @@ const Purchases = () => {
             <tr key={purchase.id}>
               <td>
                 <img 
-                  src={purchase.product.images[0].url} 
+                  src={purchase.product.productImgs[0].url} 
                   alt="" 
                   style={{width: "100px", padding: " 10px", background: "#fff"}}
                 />

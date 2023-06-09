@@ -10,7 +10,7 @@ import { setIsCartOpen } from "../store/app.slice";
 const ProductCart = ({ product, index }) => {
 
     const [quantity, setQuantity] = useState(product.quantity);
-    const total = product.product.price * quantity;
+    const total =  quantity;
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -31,10 +31,10 @@ const ProductCart = ({ product, index }) => {
     return (
         <>
         <div className='product-cart'>
-            <img src={product.product?.images[0]?.url} alt="" />
+            <img src={product.productImgs?.url} alt="" />
             <div className="details">
                 <h5 onClick={navigateToProduct}>
-                    {product.product.title}
+                    {product.title}
                 </h5>
                 <Counter
                     value={quantity}
